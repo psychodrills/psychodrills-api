@@ -12,6 +12,6 @@ class UserAuthsController < ApplicationController
     end
 
     def show_user
-        puts "\n\n\n\n #{@current_user.inspect}"
+        render json: { msg: "authorized_user", status: 200}
     end
 end
