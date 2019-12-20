@@ -30,4 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  users:
+    account_confirmation_error: "Please use the link in your mail to confirm your account"
+    account_loked_error: "Your account is locked due to some reason, Please contact with the administration"
+    account_deleted_error: "Invalid account details"

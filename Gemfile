@@ -48,3 +48,5 @@ gem 'jwt'
 
 # The simple command gem is an easy way to create services
 gem 'simple_command'
+
+gem 'hirb'
