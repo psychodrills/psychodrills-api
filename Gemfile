@@ -49,6 +49,4 @@ gem 'jwt'
 # The simple command gem is an easy way to create services
 gem 'simple_command'
 
-gem 'wdm', '>= 0.1.0'
-
-gem 'rack-cors'
+gem 'hirb'
