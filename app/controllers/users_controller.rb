@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :authenticate_request, :only => [:authenticate]
+    skip_before_action :authenticate_request, :only => [:admin_login]
 
     # new user page
     def new
@@ -16,11 +16,11 @@ class UsersController < ApplicationController
         end
     end
 
-    def authenticate
+    def admin_login
         command = AuthenticateUser.call(params[:email], params[:password])
 
         if command.success?
-            render json: { auth_token: command.result }
+            render json: { auth_token: command.result, request_status: true, request_message: "Login successfully", status: 200 }
         else
             render json: { error: command.errors }, status: :unauthorized
         end

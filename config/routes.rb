@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get :show_user, :action => :show_user
-      post :authenticate, :action => :authenticate
+      post :admin_login, :action => :admin_login
     end
     # member do
     #

@@ -50,3 +50,5 @@ gem 'jwt'
 gem 'simple_command'
 
 gem 'hirb'
+
+gem 'rack-cors'
