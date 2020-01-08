@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :last_name
       t.string :email
       t.string :password_digest
+      t.references :user_record, :polymorphic => true
       t.string :confirmation_token
       t.string :confirmed_at
       t.string :locked

@@ -4,6 +4,7 @@ class CreateActionTags < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :url
       t.string :icon
+      t.string :type
       t.boolean :is_active, :nil => false, :default => true
       t.boolean :is_deleted, :nil => false, :default => false
 
