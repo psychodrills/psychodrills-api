@@ -10,4 +10,13 @@ Rails.application.routes.draw do
     #
     # end
   end
+
+  resources :action_tags do
+    collection do
+
+    end
+    # member do
+    #
+    # end
+  end
 end
