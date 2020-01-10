@@ -1,4 +1,4 @@
-class ActionTagsController < ApplicationController
+class Api::V1::ActionTagsController < ApplicationController
 
 	# fetch all action tags and their children actions
 	def index
