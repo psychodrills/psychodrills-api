@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
-    skip_before_action :authenticate_request, :only => [:admin_login]
+    # this will skip the "authenticate request" before specified actions
+    skip_before_action :authenticate_request, :only => [:login]
 
     # new user page
     def new
@@ -16,7 +17,8 @@ class Api::V1::UsersController < ApplicationController
         end
     end
 
-    def admin_login
+
+    def login
         command = AuthenticateUser.call(params[:email], params[:password])
 
         if command.success?

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       resources :users do
         collection do
           get :show_user, :action => :show_user
-          post :admin_login, :action => :admin_login
+          post :login, :action => :login
         end
         # member do
         #
