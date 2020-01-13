@@ -5,7 +5,7 @@ class User < ApplicationRecord
     belongs_to :user_record, :polymorphic => true
 
     # validations
-    validates_presence_of :first_name, :middle_name, :email, :password_digest
+    validates_presence_of :first_name, :last_name, :email, :password_digest
 
     # callbacks
     after_create :create_confirmation_token
