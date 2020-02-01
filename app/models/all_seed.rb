@@ -1,0 +1,2 @@
+class AllSeed < ApplicationRecord
+end

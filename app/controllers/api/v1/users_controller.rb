@@ -24,7 +24,8 @@ class Api::V1::UsersController < ApplicationController
         if command.success?
             render json: { auth_token: command.result, request_status: true, request_message: "Login successfully", status: 200 }
         else
-            render json: { error: command.errors }, status: :unauthorized
+            render json: { request_status: false, request_message: "Invalid UserName or Password" }
+            # render json: { error: command.errors, request_status: false, request_message: "UserName or Password Invalid", }, status: :unauthorized
         end
     end
 
